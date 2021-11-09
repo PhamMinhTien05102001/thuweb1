@@ -15,6 +15,7 @@
 
 html {
     /* width: 100%; */
+    /* font-size: 62.5%; */
     height: 100%;
     /* background: linear-gradient(45deg, #eb3349, #dd5e89, #F7BB97, #a6ffcb, #12d8fa, #1fa2ff); */
     background: linear-gradient(45deg, #eb3349, #dd5e89, #F7BB97, #a6ffcb, #12d8fa, #1fa2ff, #12d8fa, #a6ffcb, #F7BB97, #dd5e89, #eb3349,
@@ -30,10 +31,6 @@ html {
 body{
     height: 100%;
     margin: 0;
-    /* transform: translateY(-40px); */
-    /* background-repeat: no-repeat; */
-    /* background-attachment: fixed; */
-    /* background: linear-gradient(45deg, #eb3349, #dd5e89, #F7BB97, #a6ffcb, #12d8fa, #1fa2ff); */
     position: relative;
 }
 
@@ -163,7 +160,7 @@ body{
 .content__button {
     text-align: center;
     border:2px solid black;
-    margin: 40px auto;
+    margin: 8% auto;
     width: 200px;
     height: 25px;
     border-radius: 25px;
@@ -171,17 +168,6 @@ body{
     text-align: center;
     cursor: pointer;
 }
-
-/* .content__button::before{
-    content:'';
-    position:absolute;
-    width: 200px;
-    height: 25px;
-    border:2px solid rgba(255,255,255,0.9);
-    border-radius: 25px;
-    /* background:none; */
-    /* background-image: url(./img/anh4.jpg); 
-} */
 
 .content__button:hover .content__button-text{
     transform: skew(-10deg);
