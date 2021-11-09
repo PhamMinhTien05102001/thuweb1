@@ -1,0 +1,212 @@
+:root {
+    --primary-color: #3434da;
+    --time-one : 6s;
+    --time-two : 0s;
+}
+*,
+
+*::after,
+
+*::before {
+    box-sizing: border-box ;
+    padding:0 ; 
+    margin:0;
+}
+
+html {
+    /* width: 100%; */
+    height: 100%;
+    /* background: linear-gradient(45deg, #eb3349, #dd5e89, #F7BB97, #a6ffcb, #12d8fa, #1fa2ff); */
+    background: linear-gradient(45deg, #eb3349, #dd5e89, #F7BB97, #a6ffcb, #12d8fa, #1fa2ff, #12d8fa, #a6ffcb, #F7BB97, #dd5e89, #eb3349,
+                                    #dd5e89, #F7BB97, #a6ffcb, #12d8fa, #1fa2ff);
+    background-size: 400%;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.1);
+    animation: animate var(--time-one) var(--time-two) linear infinite;
+}
+
+body{
+    height: 100%;
+    margin: 0;
+    /* transform: translateY(-40px); */
+    /* background-repeat: no-repeat; */
+    /* background-attachment: fixed; */
+    /* background: linear-gradient(45deg, #eb3349, #dd5e89, #F7BB97, #a6ffcb, #12d8fa, #1fa2ff); */
+    position: relative;
+}
+
+/* TITLE */
+.content {
+    width: 70%;
+    height: 80%;
+    /* margin: 50px auto; */
+    position: absolute;
+    margin: auto;
+    background-color: rgba(255,255,255,0.1);
+    box-shadow: 0px 0px 15px rgb(165, 158, 158);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 50px;
+    /* visibility: hidden */
+}
+
+.content__404 {
+    background: url(./img/anh4.jpg);
+    background-size: 150%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.1);
+    animation: animate 5s linear infinite;
+    background-position-x: center;
+}
+
+.content__404 h1{
+    /* position: relative; */
+    margin: 10px auto;
+    text-align: center;
+    font-size: 100px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+   
+}
+
+/* .content__404 h1::after {
+    display: block;
+    height: 215px;
+    content: '404';
+    background: linear-gradient(45deg, #eb3349, #dd5e89, #F7BB97, #a6ffcb, #12d8fa, #1fa2ff, #12d8fa, #a6ffcb, #F7BB97, #dd5e89, #eb3349,
+                                    #dd5e89, #F7BB97, #a6ffcb, #12d8fa, #1fa2ff);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.1);
+    animation: animate var(--time-one) var(--time-two) linear infinite;
+} */
+
+@keyframes animate {
+    0%{
+      background-position: 0% 0%;
+    }
+    50%{
+      background-position: 50% 50%;
+    }
+    100%{
+      background-position: 100% 100%;
+    }
+}
+
+.content__show {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.content__show h3{
+    font-size: 25px;
+    margin: 10px auto;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 1000;
+}
+
+.content__show p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+}
+
+/* SHOW INFORMATION TEAM */
+.content__show-info-team {
+
+}
+
+.info-list {
+    /* color: var(--primary-color); */
+    padding: 0;
+    margin-top: 20px;
+}
+
+.content__title {
+    text-align: center;
+}
+
+.info-item-all {
+    display: flex;
+    justify-content: space-around;
+}
+
+.info-item {
+    display: flex;
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.info-item__img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.info-item__name {
+    margin: 0;
+    line-height: 30px;
+    padding-left: 10px;
+}
+
+/* BUTTON */
+.content__button {
+    text-align: center;
+    border:2px solid black;
+    margin: 40px auto;
+    width: 200px;
+    height: 25px;
+    border-radius: 25px;
+    line-height: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* .content__button::before{
+    content:'';
+    position:absolute;
+    width: 200px;
+    height: 25px;
+    border:2px solid rgba(255,255,255,0.9);
+    border-radius: 25px;
+    /* background:none; */
+    /* background-image: url(./img/anh4.jpg); 
+} */
+
+.content__button:hover .content__button-text{
+    transform: skew(-10deg);
+    -webkit-text-fill-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+@keyframes EffectButtonShow {
+    from{
+        opacity: 0;
+        transform: translateY(-40%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes EffectButtonHide {
+    from{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to{
+        opacity: 0;
+        transform: translateY(-40%);
+    }
+}
