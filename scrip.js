@@ -1,7 +1,7 @@
 function ClickButtonInfo() {
     const info_list = document.getElementById("content__info")
     if(info_list){
-        document.getElementsByClassName('content__button-text')[0].childNodes[0].textContent = "Show Infomation Team";
+        document.getElementsByClassName('content__button-text')[0].childNodes[0].textContent = "Show Information Team";
         info_list.style.animation = `EffectButtonHide 0.5s linear`
 
         const autoRemoveId = setTimeout(function() {
